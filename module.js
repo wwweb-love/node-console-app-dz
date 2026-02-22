@@ -18,6 +18,8 @@ async function addNote(title) {
 
     notes.push(note);
 
+    console.log(chalk.bgGreen(notes))
+
     await fs.writeFile(notesPath, JSON.stringify(notes));
 }
 
@@ -31,7 +33,7 @@ async function putNote(noteId, noteTitle) {
         }
     })
 
-    console.log(chalk.bgGrey(notes))
+    console.log(chalk.bgGreen(notes))
 
     await fs.writeFile(notesPath, JSON.stringify(notes));
 }
